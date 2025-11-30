@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyw的爱好</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+       
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        body, td, th {
+            font-size: 24px;
+        }
+        
+        /* 保留原有内容区域样式 */
+        .page-header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .hobbies-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        /* 保留原有卡片样式 */
+        .hobby-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .hobby-image-container {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        
+        .hobby-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hobby-content {
+            padding: 20px;
+        }
+        
+        .hobby-title {
+            font-size: 1.5rem;
+            color: #2575fc;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+        
+        .hobby-description {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .hobby-details {
+            background-color: #f9f9f9;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .hobby-details p {
+            margin: 5px 0;
+        }
+        
+        .clickable-title {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .clickable-title:hover {
+            color: #1735EA;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .hobbies-container {
+                grid-template-columns: 1fr;
+                padding: 0 15px 30px;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 - 与参考代码完全一致 -->
+    <table>
+        <tr>
+            <td style="background:#1735EA">
+                <a href="index.html" style="color:white">首页</a>
+            </td>
+            <td style="background:#7165F7">
+                <a href="about.html" style="color:white">我</a>
+            </td>
+            <td style="background:#8E8BF2">
+                <a href="hobbies.html" style="color:white">爱好</a>
+            </td>
+            <td style="background:#B2ACFD">
+                <a href="future.html" style="color:white">关于未来</a>
+            </td>
+        </tr>
+    </table>
+    
+    <!-- 页面标题 - 保持不变 -->
+    <div class="page-header">
+        <h1>我的爱好</h1>
+        <p>生活因爱好而多彩，探索因热爱而持续</p>
+    </div>
+    
+    <!-- 爱好卡片容器 - 保持不变 -->
+    <div class="hobbies-container">
+        <!-- 乒乓球 -->
+        <div class="hobby-card">
+            <div class="hobby-image-container">
+                <img src="pp.jpg" alt="乒乓球" class="hobby-image">
+            </div>
+            <div class="hobby-content">
+                <h2 class="hobby-title clickable-title" onclick="location.href='table_tennis.html'">乒乓球</h2>
+                <p class="hobby-description">乒乓球是一项需要快速反应和精准控制的运动，能够锻炼身体协调性和专注力。作为国球，它既有趣又富有挑战性。</p>
+                <div class="hobby-details">
+                    <p><strong>水平：</strong>业余初级</p>
+                    <p><strong>技能：</strong>正手快攻，反手撕，发球变化</p>
+                    <p><strong>目标：</strong>提高比赛稳定性，学习弧圈球技术</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 羽毛球 -->
+        <div class="hobby-card">
+            <div class="hobby-image-container">
+                <img src="ymq.jpg" alt="羽毛球" class="hobby-image">
+            </div>
+            <div class="hobby-content">
+                <h2 class="hobby-title clickable-title" onclick="location.href='badminton.html'">羽毛球</h2>
+                <p class="hobby-description">羽毛球是一项全身运动，结合了力量、速度和策略，是很好的有氧锻炼方式。在球场上奔跑挥拍，能有效释放压力。</p>
+                <div class="hobby-details">
+                    <p><strong>水平：</strong>业余初级</p>
+                    <p><strong>技能：</strong>高远球，网前小球，吊球</p>
+                    <p><strong>目标：</strong>提升后场球控制力，加强步法训练</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 篮球 -->
+        <div class="hobby-card">
+            <div class="hobby-image-container">
+                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="篮球" class="hobby-image">
+            </div>
+            <div class="hobby-content">
+                <h2 class="hobby-title clickable-title" onclick="location.href='basketball.html'">篮球</h2>
+                <p class="hobby-description">篮球是团队合作的完美体现，既能锻炼身体素质，也能培养团队协作精神。在球场上与队友配合得分的感觉无与伦比。</p>
+                <div class="hobby-details">
+                    <p><strong>水平：</strong>业余初级</p>
+                    <p><strong>位置：</strong>有啥打啥</p>
+                    <p><strong>目标：</strong>提高投篮命中率，增强突破能力</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 读书 -->
+        <div class="hobby-card">
+            <div class="hobby-image-container">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="读书" class="hobby-image">
+            </div>
+            <div class="hobby-content">
+                <h2 class="hobby-title clickable-title" onclick="location.href='reading.html'">读书</h2>
+                <p class="hobby-description">阅读是思想的旅行，通过书籍可以探索不同世界、了解多元文化、获取新知识。特别喜欢科幻小说和历史传记类书籍。</p>
+                <div class="hobby-details">
+                    <p><strong>偏好类型：</strong>小说（偏严肃文学）</p>
+                    <p><strong>目标：</strong>每月阅读2-3本书，建立系统知识体系</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 辩论 -->
+        <div class="hobby-card">
+            <div class="hobby-image-container">
+                <img src="bl.jpg" alt="辩论" class="hobby-image">
+            </div>
+            <div class="hobby-content">
+                <h2 class="hobby-title clickable-title" onclick="location.href='debate.html'">辩论</h2>
+                <p class="hobby-description">辩论是思维的体操，通过逻辑推理和语言表达，锻炼批判性思维和说服能力。在辩论中能接触到各种社会议题和哲学思考。</p>
+                <div class="hobby-details">
+                    <p><strong>参与经历：</strong>计网辩论队成员</p>
+                    
+                    <p><strong>目标：</strong>提高临场反应能力，锻炼思维能力，学会思考</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 模联 -->
+        <div class="hobby-card">
+            <div class="hobby-image-container">
+                <img src="mun.jpg" alt="模联" class="hobby-image">
+            </div>
+            <div class="hobby-content">
+                <h2 class="hobby-title clickable-title" onclick="location.href='mun.html'">模拟联合国</h2>
+                <p class="hobby-description">模拟联合国活动通过角色扮演外交官，深入了解国际事务，培养全球视野和协商能力</p>
+                <div class="hobby-details">
+                    <p><strong>参与经历：</strong>wfls校内模联 GA-Syria，哈佛中国模联 IMF-Singapore</p>
+                  
+                    <p><strong>目标：</strong>提高文件写作能力和与人交流能力，拥有国际视野</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.hobby-card');
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s, transform 0.5s';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>

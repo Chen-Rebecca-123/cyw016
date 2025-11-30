@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyw的未来规划</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            
+            
+            line-height: 1.6;
+			background-image: url(future.jpg);
+        }
+        
+       
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        
+        body, td, th {
+            font-size: 24px;
+        }
+        
+        /* 内容区域样式 */
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .future-text {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .music-player {
+            margin-top: 30px;
+        }
+        
+        .play-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .play-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
+        .audio-container {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   
+    <table>
+        <tr>
+            <td style="background:#1735EA">
+                <a href="index.html">首页</a>
+            </td>
+            <td style="background:#7165F7">
+                <a href="about.html">我</a>
+            </td>
+            <td style="background:#8E8BF2">
+                <a href="hobbies.html">爱好</a>
+            </td>
+            <td style="background:#B2ACFD">
+                <a href="future.html">关于未来</a>
+            </td>
+        </tr>
+    </table>
+    
+   
+<div class="content">
+        <div class="future-text">
+            <p>我对未来的规划还比较模糊</p>
+            <p>可能读研，可能出国，可能直接工作</p>
+            <p>可能会从事计算机相关的工作</p>
+            <p>可能会从事一个毫不相关的工作</p>
+            <p>比如当一个好厨师</p>
+            <p>但是我相信我的未来不是梦</p>
+        </div>
+        
+        <div class="music-player">
+            <div class="play-button" id="playButton">播放《我的未来不是梦》</div>
+            <div class="audio-container" id="audioContainer">
+                <audio id="futureSong" controls>
+                    <source src="my_future_is_not_a_dream.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放功能。
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButton = document.getElementById('playButton');
+            const audioContainer = document.getElementById('audioContainer');
+            const futureSong = document.getElementById('futureSong');
+            
+            playButton.addEventListener('click', function() {
+             
+                audioContainer.style.display = 'block';
+                
+              
+                futureSong.play();
+                
+              
+                playButton.textContent = '正在播放《我的未来不是梦》';
+            });
+        });
+    </script>
+</body>
+</html>
